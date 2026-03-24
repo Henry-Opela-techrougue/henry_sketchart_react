@@ -98,10 +98,10 @@ const AddProuductComponent = () => {
                         onChange={(e) => { setProductCategory(e.target.value) }}
                     >
                         <option value="">Select Category</option>
-                        <option value="erasers">erasers</option>
-                        <option value="pencils">pencils</option>
-                        <option value="prawing books">drawing books</option>
-                        <option value="reference Art Books">reference art books</option>
+                        <option value="erasers">Erasers</option>
+                        <option value="pencils">Pencils</option>
+                        <option value="prawing books">Drawing Books</option>
+                        <option value="reference Art Books">Reference Art Books</option>
                     </select>
                     <br /><br />
 
