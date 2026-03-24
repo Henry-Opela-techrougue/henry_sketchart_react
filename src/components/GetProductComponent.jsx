@@ -61,9 +61,9 @@ const GetProductsComponent = () => {
     console.log("products:",products)
 
     const handleSearch = (search_word)=>{
-        let filterProducts=products.filter((product)=>product.product_name.includes(search_word),)
+        let filterProducts=products.filter((product)=>product.product_name.toLowerCase().includes(search_word.toLowerCase()),)
     }
-    useEffect(()=>{handleSearch(search_word)});
+    useEffect(()=>{handleSearch(search_word)},[search_word]);
 
 
     return (
