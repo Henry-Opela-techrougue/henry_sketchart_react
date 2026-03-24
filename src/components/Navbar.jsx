@@ -22,11 +22,8 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <div className="navbar-nav" >
                         <Link className="nav-link" to='/'>Home</Link>
-                        {user !== null && user.role === "seller"?(
+                        
                             <Link className="nav-link" to='/addproduct'>Add Product</Link>
-                        ):(
-                            ""
-                        )}
                         
                     </div>
 
