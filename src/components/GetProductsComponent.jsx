@@ -76,7 +76,7 @@ const GetProductsComponent = () => {
             {/* Search bar */}
             <input type="text" 
             placeholder="Search product" 
-            className="form-control" 
+            className="form-control search" 
             value={search_word}
                 onChange={(e) => { setSearchWord(e.target.value) }} />
             
@@ -104,6 +104,7 @@ const GetProductsComponent = () => {
                             <br />
                             {/* {state: {product}} is used to take the user to the specific product */}
                             <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
+                            <button className="btn btn-success m-2" onClick={() => { navigator("/addtocart") }}>Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -124,6 +125,8 @@ const GetProductsComponent = () => {
                             <br />
                             {/* {state: {product}} is used to take the user to the specific product */}
                             <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
+                            <button className="btn btn-success m-2" onClick={() => { navigator("/addtocart") }}>Add To Cart</button>
+
                         </div>
                     </div>
                 </div>
@@ -144,6 +147,8 @@ const GetProductsComponent = () => {
                             <br />
                             {/* {state: {product}} is used to take the user to the specific product */}
                             <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
+                            <button className="btn btn-success m-2" onClick={() => { navigator("/addtocart") }}>Add To Cart</button>
+
                         </div>
                     </div>
                 </div>
@@ -164,6 +169,8 @@ const GetProductsComponent = () => {
                             <br />
                             {/* {state: {product}} is used to take the user to the specific product */}
                             <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
+                            <button className="btn btn-success m-2" onClick={() => { navigator("/addtocart") }}>Add To Cart</button>
+
                         </div>
                     </div>
                 </div>

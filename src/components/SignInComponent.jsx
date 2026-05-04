@@ -64,16 +64,18 @@ const SignInComponent = () => {
     }
 
     return (
-        <div className="row justify-content-center mt-4 black">
+        <div className="row justify-content-center black show">
             <Navbar/>
-            <div className="col-md-6 card shadow p-4">
-                <h2>Sign In</h2>
+            <div className="col-md-6 p-4">
+                <h2 className="text-light"><u>Sign In</u></h2>
 
+                <h3 className="text-light">Please fill in this form</h3>
+                
                 <h5 className="text-warning">{loading}</h5>
                 <h5 className="text-success">{success}</h5>
                 <h5 className="text-danger">{error}</h5>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="viel">
                     <input type="email"
                         placeholder="Enter Your Email"
                         className="form-control"

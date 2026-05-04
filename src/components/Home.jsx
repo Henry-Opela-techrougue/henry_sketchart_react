@@ -26,40 +26,41 @@ const Home = () => {
             </div> */}
 
             </div>
-            <h1 className="text-warning text-start ms-1 move">Welcome To SketchArts</h1>
-            <h2 className="text-start ms-5 move">This is where you can learn drawing techniques and other amizing things about art. </h2>
+            <h1 className="text-light center move"><u>Welcome To SketchArts</u></h1>
+            <h4 className="center ms-5 move text-light">This is where you can learn drawing techniques and other amizing things about art. </h4>
 
             <br />
 
-            <h2 className="text-start ms-5 text-dark move">We provide various essentials to help those with the passion to draw various amenities. </h2>
+            <h4 className="center ms-5 text-light move">We provide various essentials to help those with the passion to draw various amenities. </h4>
             <br />
             <br />
             <br />
 
-
+            <h2 className="text-light"><u>For More</u></h2>
+                <h5 className="btw explore neon-button">Explore</h5>
 
             <div className="body">
                 <div className="icon">
                     <div className="br">
-                        <button className="btn btn-primary split br" onClick={() => { navigator("/addproduct") }}><b className="item a">Add Product</b></button>
+                        <h5 className="split " onClick={() => { navigator("/addproduct") }}><b className="item a">Add Product</b></h5>
                         <br />
                         <br />
                     </div>
 
-                    <div className="">
-                        <button className="btn btn-primary split br" onClick={() => { navigator("/getproducts") }}><b className="item b">Add Product</b></button>
+                    <div className="br">
+                        <h5 className=" split" onClick={() => { navigator("/getproducts") }}><b className="item b">Our Product</b></h5>
                         <br />
                         <br />
                     </div>
 
-                    <div className="">
-                        <button className="btn btn-primary split br" onClick={() => { navigator("/signin") }}><b className="item c">Sign In</b></button>
+                    <div className="br">
+                        <h5 className=" split" onClick={() => { navigator("/signin") }}><b className="item c">Sign In</b></h5>
                         <br />
                         <br />
                     </div>
 
-                    <div className="">
-                        <button className="btn btn-primary split br" onClick={() => { navigator("/signup") }}><b className="item d">Sign Up</b></button>
+                    <div className="br">
+                        <h5 className=" split" onClick={() => { navigator("/signup") }}><b className="item d">Sign Up</b></h5>
                         <br />
                         <br />
                     </div>

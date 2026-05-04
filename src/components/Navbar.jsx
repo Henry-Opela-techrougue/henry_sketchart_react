@@ -12,9 +12,9 @@ const Navbar = () => {
         navigator("/signin")
     }
     return (
-        <>
+        <div>
             <nav className="navbar navbar-expand-lg">
-                <Link className="navbar-brand" to='/'>Sketch Arts</Link>
+                <Link className="navbar-brand text-light" to='/'><b>SKETCH ARTS</b></Link>
                 <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -39,13 +39,13 @@ const Navbar = () => {
                             //colon
                         ) : (
                             <div className="navbar-nav ms-auto">
-                                <Link className="nav-link" to='/signin'>Sign In</Link>
-                                <Link className="nav-link" to='/signup'>Sign Up</Link>
+                                <Link className="nav-link blue text-light" to='/signin'>Sign In</Link>
+                                <Link className="nav-link blue2 text-light" to='/signup'>Sign Up</Link>
                             </div>
                         )}
                 </div>
             </nav>
-        </>
+        </div>
     )
 }
 

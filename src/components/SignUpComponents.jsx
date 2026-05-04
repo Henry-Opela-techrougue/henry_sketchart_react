@@ -59,19 +59,21 @@ const SignUpComponent = () => {
         }
     };
     return (
-        <div className="row justify-content-center mt-4">
+        <div className="row justify-content-center show">
             <Navbar/>
-            <div className="col-md-6 card shadow p-4">
+            <div className="col-md-6 p-4">
                 <br />
-                <h1>
-                    Sign Up
+                <h1 className="text-light">
+                    <u>Sign Up</u>
                 </h1>
+
+                <h3 className="text-white">Please fill in the form</h3>
                 <h5 className="text-warning">{loading}</h5>
                 <h5 className="text-danger">{error}</h5>
                 <h5 className="text-success">{success}</h5>
                 {/* <p>Current Username :{username}</p> */}
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="viel">
                     <input type="text"
                         className="form-control"
                         placeholder="Enter Your Username"
@@ -114,7 +116,7 @@ const SignUpComponent = () => {
                     <br /><br />
 
                     <button className="btn btn-dark">
-                        Sign Up
+                        Register
                     </button><br />
 
                     <Link to='/signin'>Already have an account? Sign In</Link>

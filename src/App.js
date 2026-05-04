@@ -4,12 +4,14 @@ import './App.css';
 import SignInComponent from './components/SignInComponent';
 import SignUpComponent from './components/SignUpComponents';
 import AddProductComponent from './components/AddProductComponent';
-import GetProductsComponent from './components/GetProductsComponent';
+import GetProductsComponent from './components/GetProductsComponent'
 import Navbar from './components/Navbar';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 import MakePaymentComponent from './components/MakePaymentComponent';
 import Home from './components/Home';
+import Explore from './components/Explore'
+import AddToCartComponent from './components/AddToCartComponent';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             <Route path='/addproduct' element={<AddProductComponent />} />
             <Route path='/makepayment' element={<MakePaymentComponent />} />
             <Route path='/getproducts' element={<GetProductsComponent />} />
+            <Route path='/explore' element={<Explore/>}/>
+            <Route path='/addtocart' element={<AddToCartComponent/>}/>
             <Route path='/' element={<Home/>}/>
           </Routes>
         </div>
