@@ -4,11 +4,12 @@ import './App.css';
 import SignInComponent from './components/SignInComponent';
 import SignUpComponent from './components/SignUpComponents';
 import AddProductComponent from './components/AddProductComponent';
-import GetProductComponent from './components/GetProductComponent';
+import GetProductsComponent from './components/GetProductsComponent';
 import Navbar from './components/Navbar';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 import MakePaymentComponent from './components/MakePaymentComponent';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -16,15 +17,16 @@ function App() {
       
       <div className="container-fluid">
         <div className="App">
-          <header className="App-header">
+          {/* <header className="App-header">
             <h1 className='text-warning'>Sketch Arts</h1>
-          </header>
+          </header> */}
           <Routes>
             <Route path='/signin' element={<SignInComponent />} />
             <Route path='/signup' element={<SignUpComponent />} />
             <Route path='/addproduct' element={<AddProductComponent />} />
             <Route path='/makepayment' element={<MakePaymentComponent />} />
-            <Route path='/' element={<GetProductComponent />} />
+            <Route path='/getproducts' element={<GetProductsComponent />} />
+            <Route path='/' element={<Home/>}/>
           </Routes>
         </div>
       </div>

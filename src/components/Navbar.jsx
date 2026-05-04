@@ -21,9 +21,9 @@ const Navbar = () => {
 
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <div className="navbar-nav" >
-                        <Link className="nav-link" to='/'>Home</Link>
-                        
-                            <Link className="nav-link" to='/addproduct'>Add Product</Link>
+                        <Link className="nav-link" to='/'><b>Home</b></Link>
+                        <Link className="nav-link" to='/getproducts'><b>Get Products</b></Link>
+                        <Link className="nav-link" to='/addproduct'><b>Add Product</b></Link>
                         
                     </div>
 

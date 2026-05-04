@@ -2,27 +2,30 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+ .App-logo {
+  height: 10vmin;
   pointer-events: none;
+  background-image: fill;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 20s linear; 
   }
-}
+} */
 
 .App-header {
-  background-color: #5f6060;
-  min-height: 15vh;
+  background-color: #282c34;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  border-radius:20px ;
+  border-radius: 25px
 }
 
 .App-link {
@@ -36,5 +39,94 @@
   to {
     transform: rotate(360deg);
   }
+} 
+
+/* .yuta {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(7px + 2vmin);
+  color: white;
+  border-radius: 25px
+} */
+
+.background {
+  background-color: black;
+  background-image: url("../src/components/Setscene.jpg");
+  height: 110vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0);
+  
 }
 
+/* for sign in */
+.backpen {
+  
+  
+}
+
+/* for sign up */
+.colla {
+
+}
+
+.move {
+  animation-name: slide;
+  animation-duration: 4s;
+}
+
+.split {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.br {
+  text-decoration: none;
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  border: solid burlywood;
+  overflow: hidden;
+}
+
+/* buttons */
+.item a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: 0;
+  scale: 1 0;
+  transform-origin: bottom;
+  transition: scale 0.5s ease;
+}
+
+/* *****Animation***** */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    margin-left: 3em;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}

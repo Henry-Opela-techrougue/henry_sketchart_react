@@ -12,7 +12,7 @@ const GetProductsComponent = () => {
     let [erasers, setErasers] = useState([])
     let [pencils, setPencils] = useState([])
     let [drawingbooks, setDrawingBooks] = useState([])
-    let [reference_artbooks, setReferenceArtBooks] = useState([])
+    let [referenceartbooks, setReferenceArtBooks] = useState([])
 
     let [filtered_products, setFilteredProducts]=useState("")
 
@@ -40,7 +40,7 @@ const GetProductsComponent = () => {
                 setLoading("")
                 setProducts(response.data)
 
-                let erasers_products = response.data.filter((product) => product.product_category === "erasers");
+                let erasers_products = response.data.filter((product) => product.product_category === "eraser");
                 setErasers(erasers_products)
 
                 let pencils_products = response.data.filter((product) => product.product_category === "pencils")
@@ -49,8 +49,8 @@ const GetProductsComponent = () => {
                 let drawingbooks_products = response.data.filter((product) => product.product_category === "drawing books")
                 setDrawingBooks(drawingbooks_products)
 
-                let reference_artbooks_products = response.data.filter((product) => product.product_category === "reference art books")
-                setReferenceArtBooks(reference_artbooks_products)
+                let referenceartbooks_products = response.data.filter((product) => product.product_category === "pencils")
+                setReferenceArtBooks(referenceartbooks_products)
             }
         } catch (error) {
             setLoading("")
@@ -61,9 +61,9 @@ const GetProductsComponent = () => {
     console.log("products:",products)
 
     const handleSearch = (search_word)=>{
-        let filterProducts=products.filter((product)=>product.product_name.toLowerCase().includes(search_word.toLowerCase()),)
+        let filterProducts=products.filter((product)=>product.product_name.includes(search_word),)
     }
-    useEffect(()=>{handleSearch(search_word)},[search_word]);
+    useEffect(()=>{handleSearch(search_word)});
 
 
     return (
@@ -148,7 +148,7 @@ const GetProductsComponent = () => {
             ))}
 
             <h2 className="text-center my-2 p-4 bg-dark text-white">Reference Art Books</h2>
-            {reference_artbooks.map((product) => (
+            {referenceartbooks.map((product) => (
                 <div className="col-md-3 justify-content-center mb-4">
                     <div className="card shadow card-margin">
                         <img src={img_url + product.product_image} alt="" className="product_img mt-4" />
