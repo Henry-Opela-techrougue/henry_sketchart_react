@@ -8,7 +8,7 @@ const Home = () => {
 
     // text
     return (
-        <div className="background">
+        <div className="row background h-150">
             <Navbar />
             <div className="landingpage">
 
@@ -20,54 +20,88 @@ const Home = () => {
                         <div></div>
                     </div>
                 </div>
-                {/* <div className="home-text">
-                <h1 className="text-warning">Welcome to SKETCHARTS</h1>
-                <p className="text-dark">Come live out your art talent with an aid from us</p>
-            </div> */}
+
+            <br />
 
             </div>
-            <h1 className="text-light center move"><u>Welcome To SketchArts</u></h1>
-            <h4 className="center ms-5 move text-light">This is where you can learn drawing techniques and other amizing things about art. </h4>
 
-            <br />
+            <div className="row">
+            <h3 className="display-1 text-light text-start move center middle"><u>Welcome To SketchArts</u></h3>
+            <h5 className="text-start move text-light center middle">This is where you can learn drawing techniques and other amizing things about art. </h5>
 
-            <h4 className="center ms-5 text-light move">We provide various essentials to help those with the passion to draw various amenities. </h4>
-            <br />
-            <br />
-            <br />
+            
 
-            <h2 className="text-light"><u>For More</u></h2>
-                <h5 className="btw explore neon-button">Explore</h5>
-
-            <div className="body">
-                <div className="icon">
-                    <div className="br">
-                        <h5 className="split " onClick={() => { navigator("/addproduct") }}><b className="item a">Add Product</b></h5>
-                        <br />
-                        <br />
-                    </div>
-
-                    <div className="br">
-                        <h5 className=" split" onClick={() => { navigator("/getproducts") }}><b className="item b">Our Product</b></h5>
-                        <br />
-                        <br />
-                    </div>
-
-                    <div className="br">
-                        <h5 className=" split" onClick={() => { navigator("/signin") }}><b className="item c">Sign In</b></h5>
-                        <br />
-                        <br />
-                    </div>
-
-                    <div className="br">
-                        <h5 className=" split" onClick={() => { navigator("/signup") }}><b className="item d">Sign Up</b></h5>
-                        <br />
-                        <br />
-                    </div>
-                </div>
+            <h5 className="text-start text-light move middle">We provide various essentials to help those with the passion to draw various amenities. </h5>
             </div>
 
+            <br />
+            <br />
 
+            <div className="row">
+                <h3 className="text-light move middle"><u>For More</u></h3>
+
+            </div>
+            <br />
+            <br />
+
+                    <div className="row middle">
+                        <div className="col-md-6">
+                            {/* button */}
+                            <div className="icon">
+                                <div className="body">
+                                    <div>
+                                        <h6 className="split" onClick={() => { navigator("/getproducts") }}><b className="br1">Our Products</b></h6>
+                                        <br />
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+                        <div className="col-md-6">
+                        {/* button */}
+                            <div className="icon">
+                                <div className="body">
+                                <div>
+                                    <h6 className="split" onClick={() => { navigator("/addproduct") }}><b className="br1">Add Product</b></h6>
+                                    <br />
+                                    <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <h6 className="text-light middle move">You can read About Us & Send us your Feedback if any.</h6>
+
+                    </div>
+
+                    <br />
+                    <br />
+                    {/* button */}
+                            <div className="row">
+                                <div className="col-md-6 icon middle">
+                                <div className="body">
+                                <div>
+                                    <h6 className="split" onClick={() => { navigator("/aboutus") }}><b className="br1">About Us</b></h6>
+                                    <br />
+                                    <br />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-md-6 icon middle">
+                                <div className="body">
+                                <div>
+                                    <h6 className="split" onClick={() => { navigator("/feedback") }}><b className="br1">Feedback</b></h6>
+                                    <br />
+                                    <br />
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                    
         </div>
     )
 

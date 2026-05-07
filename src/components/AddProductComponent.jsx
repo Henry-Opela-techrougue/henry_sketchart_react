@@ -57,16 +57,16 @@ const AddProuductComponent = () => {
 
 
     return (
-        <div className="row justify-content-center mt-4">
+        <div className="row justify-content-center colorful h-100">
             <Navbar/>
-            <div className="col-md-6 card shadow p-4">
+            <div className="col-md-6 p-4">
                 <h2>Add Product</h2>
 
                 <h5 className="text-danger">{error}</h5>
                 <h5 className="text-warning">{loading}</h5>
                 <h5 className="text-success">{success}</h5>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="viel">
                     <input type="text"
                         placeholder="Product Name"
                         className="form-control"
@@ -76,7 +76,7 @@ const AddProuductComponent = () => {
                     <br /><br />
 
                     <textarea className="form-control"
-                        rows="7"
+                        rows="5"
                         placeholder="Product Description"
                         required
                         onChange={(e) => { setProductDescription(e.target.value) }}
@@ -98,9 +98,9 @@ const AddProuductComponent = () => {
                         onChange={(e) => { setProductCategory(e.target.value) }}
                     >
                         <option value="">Select Category</option>
-                        <option value="erasers">Erasers</option>
+                        <option value="erasers">erasers</option>
                         <option value="pencils">Pencils</option>
-                        <option value="prawing books">Drawing Books</option>
+                        <option value="prawing books">Drawing books</option>
                         <option value="reference Art Books">Reference Art Books</option>
                     </select>
                     <br /><br />

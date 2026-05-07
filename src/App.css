@@ -17,7 +17,7 @@
 } */
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -41,73 +41,374 @@
   }
 } 
 
-/* .yuta {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(7px + 2vmin);
-  color: white;
-  border-radius: 25px
-} */
-
-.show {
-background: url("/src/components/images/Adhesive.jpg");
-height: 100vh;
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-overflow: hidden;
+.m {
+  margin-right: -10px;
+}
+.custom-row {
+  --bs-gutter-x: -1rem; /* Increases horizontal spacing */
 }
 
+h3 {
+  justify-content: center;
+}
+h1 {
+  justify-content: center;
+  display: flex;
+}
 
-.background {
-  background-color: black;
-  background: url("../src/components/images/Colured.jpg");
+.nor {
+  display: flex;
+  justify-content: center;
+}
+
+/* style for card in products */
+
+/* style for card in products */
+
+
+/* navbar  */
+.blue {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border for glass edge */
+  background: rgba(255, 255, 255, 0.2);       /* Semi-transparent white */
+  backdrop-filter: blur(10px);               /* The "frosted glass" effect */
+  color: #fff;
+}
+
+.blue2 {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border for glass edge */
+  background: rgba(133, 128, 128, 0.808);       /* Semi-transparent white */
+  backdrop-filter: blur(10px);               /* The "frosted glass" effect */
+  color: #fff;
+}
+/* end of navbar */
+
+.glam {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border for glass edge */
+  background: rgba(133, 128, 128, 0.808);       /* Semi-transparent white */
+  backdrop-filter: blur(10px);               /* The "frosted glass" effect */
+  color: #fff;
+}
+
+.nork {
+  background: url("/src/components/images/Su\ UI.jpg");
   height: 100vh;
-  width: auto;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.truefex {
+  background: url("/src/components/images/Su\ UI.jpg");
+  height: 100vh;
   background-size: cover;
-  overflow: hidden;
-  box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0);
-  
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background {
+  background: url("/src/components/images/Blackcool2.jpg");
+  height: 100vh;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: unset;
+}
+
+.forward {
+  background: url("/src/components/artbook/Artbookbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: unset;
+}
+
+.erase {
+  background: url("/src/components/erasers/Erasebg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.portrait {
+  background: url("/src/components/pencils/Pencilbg.jpg");
+  /* height: 100vh; */
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.front {
+  background: url("/src/components/refart/Bgref.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero {
+  background: url("/src/components/pencils/Pencilbg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.beru {
+  background: url("/src/components/erasers/Erasebg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.igris {
+  background: url("/src/components/refart/Bgref.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.iron {
+  background: url("/src/components/artbook/Artbookbg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.flower {
+  background: url("/src/components/images/Fullflower.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* for sign in */
-.backpen {
-  
-  
-}
-
-/* for sign up */
-.colla {
-
-}
-
-.move {
-  animation-name: slide;
-  animation-duration: 4s;
-  
-}
-
-.split {
-  /* grid-template-columns: repeat(4, 1fr); */
-}
-
-.body {
-  display: flex;
-  justify-content: center;
-  gap: 3.5rem;
+.middle {
+ justify-content: center; 
+ display: flex;
 }
 
 .btw {
   justify-content: center;
 }
 
+.colorful {
+  background: url("/src/components/images/Colourful.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.viel {
+   /* glass */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+}
+
+/* for sign up */
+.overral {
+ background: url("/src/components/images/Stack.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ height: 100vh;
+ overflow: hidden;
+}
+
+.backpen {
+  background: url("../src/components/images/Stack.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+}
+
+
+.neon {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+}
+
 .explore {
+  /* padding: 20px 40px; */
+  color: #39ff14; /* Neon Green */
+  /* border: 4px solid #39ff14; */
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 0px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  /* Initial subtle glow */
+  /* box-shadow: 0 0 10px #39ff14, inset 0 0 10px #39ff14; */
+}
+
+/* glass button */
+.glass-button {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border for glass edge */
+  background: rgba(255, 255, 255, 0.2);       /* Semi-transparent white */
+  backdrop-filter: blur(10px);               /* The "frosted glass" effect */
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: /*background*/ 0.3s ease;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.3); /* Brightens slightly on hover */
+}
+
+/* for sign up */
+
+
+.arg {
+  justify-content: center;
+}
+/* for rows and columns in explore */
+
+
+.div {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+}
+
+.chord2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4rem;
+  /* column-gap: 2rem; */
+  /* grid-template-rows: 70vh 70vh; */
+}
+
+/* end of explore rows and columns */
+
+.move {
+  animation-name: slide;
+  animation-duration: 4s;
+}
+
+.split {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* buttons */
+.body {
+  display: flex;
+  justify-content: center;
+  /* gap: 2.5rem; */
+}
+
+/* .col-md-6 {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 10px;
+  border-radius: 10px;
+} */
+
+/* start of button move */
+.itema  {
+  text-decoration: none;
+  /* width: 4.8rem; */
+  /* height: 4.8rem; */
+  /* background-color: rgb(185, 177, 97); */
+  /* border-radius: 40%; */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* z-index: 1; */
+  /* border: solid burlywood; */
+  /* overflow: hidden; */
+  transition: 0.5s ease;
+  z-index: 2;
+  animation-name: colora;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  /* glass */
+  /* background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px; */
+}
+
+.itemb  {
+  text-decoration: none;
+  /* width: 4.8rem;
+  height: 4.8rem;
+  background-color: rgb(185, 177, 97); 
+  border-radius: 40%;*/
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /*z-index: 1;
+  border: solid burlywood; */
+  /* overflow: hidden; */
+  transition: 0.5s ease;
+  /* z-index: 2; */
+  animation-name: colorb;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+
+  /* glass */
+  /* background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px; */
+}
+
+.itemc  {
+  text-decoration: none;
+  width: 4.8rem;
+  height: 4.8rem;
+  /* background-color: rgb(185, 177, 97); */
+  border-radius: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  /* border: solid burlywood; */
+  overflow: hidden;transition: 0.5s ease;
+  z-index: 2;
+  animation-name: colorc;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+
+  /* glass */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+}
+
+/* .explore {
   width: 5rem;
   height: 5rem;
   display: flex;
@@ -115,10 +416,93 @@ overflow: hidden;
   justify-content: center;
   padding: 12px 24px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border for glass edge */
-  background: rgba(255, 255, 255, 0.2);       /* Semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  background: rgba(255, 255, 255, 0.2);      
+  backdrop-filter: blur(10px);              
+  color: #fff;
+}  */
+
+.itemd  {
+  text-decoration: none;
+  width: 4.8rem;
+  height: 4.8rem;
+  /* background-color: rgb(185, 177, 97); */
+  border-radius: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  /* border: solid burlywood; */
+  overflow: hidden;transition: 0.5s ease;
+  z-index: 2;
+  animation-name: colord;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+
+  /* glass */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+}
+
+.iteme  {
+  text-decoration: none;
+  width: 4.8rem;
+  height: 4.8rem;
+  /* background-color: rgb(185, 177, 97); */
+  border-radius: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  /* border: solid burlywood; */
+  overflow: hidden;transition: 0.5s ease;
+  z-index: 2;
+  animation-name: colorc;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+
+  /* glass */
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 0px solid rgba(255, 255, 255, 0.3); /* Soft border for glass edge */
+  background: rgba(133, 128, 128, 0.808);       /* Semi-transparent white */
   backdrop-filter: blur(10px);               /* The "frosted glass" effect */
   color: #fff;
+}
+
+/* Hover Effect */
+/* .explore:hover {
+  color: #5e6e75;
+  background-color: #39ff14;
+  Strong glow on hover
+  box-shadow: 0 0 30px #39ff14, 0 0 60px #39ff14, 0 0 100px #39ff14;
+/* }  */
+
+/* end of button move */
+.facade {
+  background: url("/src/components/images/Stack.jpg");
+}
+
+/* buttons */
+.br1 {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(99, 97, 97, 0.3);
+  /* background: rgba(255, 255, 255, 0.2);   Semi-transparent white */
+  backdrop-filter: blur(20px);               /* The "frosted glass" effect */
+  color: #fff;
+}
+
+.br1:hover {
+  background: rgba(255, 255, 255, 0.3); /* Brightens slightly on hover */
 }
 
 .br {
@@ -141,93 +525,98 @@ overflow: hidden;
   color: #fff;
 }
 
-/* sign up */
-.viel {
-  padding: 12px 24px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border for glass edge */
-  background: rgba(255, 255, 255, 0.2);       /* Semi-transparent white */
-  backdrop-filter: blur(10px);               /* The "frosted glass" effect */
-  color: #fff;
-}
-/* end of sign up */
-
-/* nvbar  */
-.blue {
-  padding: 12px 24px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border for glass edge */
-  background: rgba(255, 255, 255, 0.2);       /* Semi-transparent white */
-  backdrop-filter: blur(10px);               /* The "frosted glass" effect */
-  color: #fff;
-}
-
-.blue2 {
-  padding: 12px 24px;
-  border-radius: 12px;
-  border: 1px solid rgba(216, 214, 214, 0.3); /* Soft border for glass edge */
-  background: rgba(146, 142, 142, 0.2);       /* Semi-transparent white */
-  backdrop-filter: blur(20px);               /* The "frosted glass" effect */
-  color: #fff;
-}
-/* end of navbar */
-
-/* buttons */
-.item a::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: var(--bg-color);
-  z-index: 0;
-  scale: 1 0;
-  transform-origin: bottom;
-  transition: scale 0.5s ease;
-}
-
-/* glass button */
-.glass-button {
-  padding: 12px 24px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border for glass edge */
-  background: rgba(255, 255, 255, 0.2);       /* Semi-transparent white */
-  backdrop-filter: blur(10px);               /* The "frosted glass" effect */
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease;
-}
-
-.glass-button:hover {
+.br:hover {
   background: rgba(255, 255, 255, 0.3); /* Brightens slightly on hover */
 }
 
-.search {
-  margin-left: 100px;
-}
 
-.neon-button {
-  padding: 20px 40px;
-  color: #39ff14; /* Neon Green */
-  border: 4px solid #39ff14;
-  text-decoration: none;
-  font-size: 10px;
-  letter-spacing: 0px;
-  transition: all 0.3s ease;
-  position: relative;
+/* explore in background */
+.ground {
+  background: url("/src/components/images/Glass.jpg");
+  height: 100vh;
+  position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
   overflow: hidden;
-  /* Initial subtle glow */
-  box-shadow: 0 0 10px #39ff14, inset 0 0 10px #39ff14;
+  /* background-position: center; */
 }
 
-/* Hover Effect */
-.neon-button:hover {
-  color: #111;
-  background-color: #39ff14;
-  /* Strong glow on hover */
-  box-shadow: 0 0 30px #39ff14, 0 0 60px #39ff14, 0 0 100px #39ff14;
+/* sign in and sign up neon */
+.form-control {
+  background: #111;
+  column-rule-color: #0ff;
+  border: 2px solid #0ff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-shadow: 0 0 5px #0ff;
+  box-shadow: 0 0 10px #0ff;
+
 }
+/* end of sign in and signn up neon */
+
+
+
+
+
+/* for label */
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: gray;
+    transition: 0.2s ease;
+    pointer-events: none;
+    background: rgb(39, 37, 37);
+    padding: 0 5px;
+}
+
+/* when user types or focuses */
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+/* end of floating label */
+
+.chord {
+  /* glass */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+}
+
+/* .chord2 {
+  /* glass
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+} */
+
+/* end of explore in background */
+
 /* *****Animation***** */
 @keyframes slide {
   0% {
@@ -239,3 +628,51 @@ overflow: hidden;
   }
   
 }
+
+/* MOVE */
+ @keyframes colora {
+  from {
+    top: 0;
+  }
+  to {
+    top: 5px;
+    background-color: #000;
+  }
+  from {
+    top: 5px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes colorb {
+  from {
+    top: 5px;
+  }
+  to {
+    top: 0;
+    background-color: #000;
+  }
+}
+
+/*@keyframes colorc {
+  from {
+    top: 0;
+  }
+  to {
+    top: 20px;
+    background-color: #000;
+  }
+}
+
+@keyframes colord {
+  from {
+    top: 20px;
+  }
+  to {
+    top: 0;
+    background-color: #000;
+  }
+  
+} */

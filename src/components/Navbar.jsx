@@ -21,9 +21,9 @@ const Navbar = () => {
 
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <div className="navbar-nav" >
-                        <Link className="nav-link" to='/'><b>Home</b></Link>
-                        <Link className="nav-link" to='/getproducts'><b>Get Products</b></Link>
-                        <Link className="nav-link" to='/addproduct'><b>Add Product</b></Link>
+                        <Link className="nav-link" to='/'><b className="br1">Home</b></Link>
+                        {/* <Link className="nav-link blue" to='/getproducts'><b className="br1">Get Products</b></Link>
+                        <Link className="nav-link blue" to='/addproduct'><b className="br1">Add Product</b></Link> */}
                         
                     </div>
 
@@ -39,8 +39,8 @@ const Navbar = () => {
                             //colon
                         ) : (
                             <div className="navbar-nav ms-auto">
-                                <Link className="nav-link blue text-light" to='/signin'>Sign In</Link>
-                                <Link className="nav-link blue2 text-light" to='/signup'>Sign Up</Link>
+                                <Link className="nav-link text-light br1" to='/signin'>Sign In</Link>
+                                <Link className="nav-link text-light br1" to='/signup'>Sign Up</Link>
                             </div>
                         )}
                 </div>
