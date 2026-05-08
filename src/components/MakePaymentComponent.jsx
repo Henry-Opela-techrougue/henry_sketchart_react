@@ -44,14 +44,14 @@ const MakePaymentComponent = () => {
     const { product } = useLocation().state || {}
     console.log(product)
     return (
-        <div className="row justify-content-center mt-4">
+        <div className="row justify-content-center payment">
             <Navbar/>
-            <h2>LIPA NA MPESA</h2>
+            <h2 className="text-success mpesa">LIPA NA MPESA</h2>
             <div className="col-md-3">
                 <img src={img_url + product.product_image} alt="" className="rounded img-thumbnail" />
             </div>
 
-            <div className="col-md-3 p-4">
+            <div className="col-md-3 p-4 viel mb-5">
                 <h2 className="text-dark">{product.product_name}</h2>
                 <h4 className="text-primary">{product.product_category}</h4>
                 <p className="text-muted">{product.product_description}</p>

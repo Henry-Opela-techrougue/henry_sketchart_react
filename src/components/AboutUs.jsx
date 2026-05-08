@@ -9,7 +9,7 @@ const AboutUs = () => {
 
             <Navbar />
             <div className="row move mt-0">
-                <h3 className="text-light nor mt-0"><u>About Us</u></h3>
+                <h3 className="text-light nor mt-0"><u>About Skwtch Arts</u></h3>
                 <h6 className="text-light">For those with the passion of Art this site is to help you to achieve your goals.</h6>
                 <h6 className="text-light">That is by us letting aquire such equipments for Art purposes </h6>
 
@@ -25,17 +25,17 @@ const AboutUs = () => {
                             "_blank"
                         )
                     } style={{ cursor: "pointer" }}>
-                        <i className="bi bi-instagram" onClick={() =>
-                            window.open(
-                                "https://www.youtube.com/results?search_query=tokyorougue",
-                                "_blank"
-                            )
-                        } style={{ cursor: "pointer" }}></i>
+                        <i className="bi bi-instagram" style={{ cursor: "pointer" }}></i>
                     </h1>
                 </div>
 
                 <div className="col-md-3">
-                    <h2 className="text-light"><i className="bi bi-youtube"></i></h2>
+                    <h2 className="text-light" onClick={() =>
+                            window.open(
+                                "https://www.youtube.com/results?search_query=Tokyorougue",
+                                "_blank"
+                            )
+                        } ><i className="bi bi-youtube" style={{ cursor: "pointer" }}></i></h2>
                 </div>
 
                 <div className="col-md-3">

@@ -5,9 +5,9 @@ const Navbar = () => {
     const user = JSON.parse(localStorage.getItem("user"))
     console.log(user)
 
-    let navigator=useNavigate()
+    let navigator = useNavigate()
 
-    const handleLogout=()=>{
+    const handleLogout = () => {
         localStorage.clear()
         navigator("/signin")
     }
@@ -24,17 +24,16 @@ const Navbar = () => {
                         <Link className="nav-link" to='/'><b className="br1">Home</b></Link>
                         {/* <Link className="nav-link blue" to='/getproducts'><b className="br1">Get Products</b></Link>
                         <Link className="nav-link blue" to='/addproduct'><b className="br1">Add Product</b></Link> */}
-                        
-                    </div>
 
+                    </div>
                     {user ?
                         (
                             <div className="navbar-nav ms-auto">
-                                <Link className="nav-link" to='#'>
+                                <Link className="nav-link text-light" to='#'>
                                     {user.username}
                                 </Link>
 
-                                <button className="btn nav-link" onClick={handleLogout}>Log Out</button>
+                                <button className="btn nav-link text-light br2" onClick={handleLogout}>Log Out</button>
                             </div>
                             //colon
                         ) : (
@@ -43,8 +42,11 @@ const Navbar = () => {
                                 <Link className="nav-link text-light br1" to='/signup'>Sign Up</Link>
                             </div>
                         )}
+
                 </div>
             </nav>
+
+
         </div>
     )
 }

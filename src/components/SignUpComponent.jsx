@@ -1,15 +1,20 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
+
 
 const SignUpComponent = () => {
+    let navigator = useNavigate()
+    const navigate = useNavigate();
+
 
     let [username, updateUsername] = useState("")
     let [email, updateEmail] = useState("")
     let [password, updatePassword] = useState("")
     let [phone, updatePhone] = useState("")
-    let [passwordStrength, setPasswordStrength] = useState("")
+    let [emailStrength, setEmailStrength] = useState("")
 
 
     //
@@ -51,6 +56,9 @@ const SignUpComponent = () => {
                 updateEmail("")
                 updatePassword("")
                 updatePhone("")
+
+                // go to home page
+                navigate("/home");
             }
 
         } catch (error) {
@@ -61,93 +69,96 @@ const SignUpComponent = () => {
         }
     };
 
-    const checkPasswordStrength = (value) => {
-    if (!value || value.length === 0) {
-        setPasswordStrength("")
-        return
-    }
+    const checkEmailStrength = (value) => {
+        if (!value || value.length === 0) {
+            setEmailStrength("")
+            return
+        }
 
-    const strongRegex =
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        const strongRegex =
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-    if (strongRegex.test(value)) {
-        setPasswordStrength("Strong 💪")
-    } else if (value.length >= 6) {
-        setPasswordStrength("Medium ⚠️ (Add uppercase, number, special char)")
-    } else {
-        setPasswordStrength("Weak ❌ (Too short)")
+        if (strongRegex.test(value)) {
+            setEmailStrength("Strong 💪")
+        } else if (value.length >= 6) {
+            setEmailStrength("Medium ⚠️ (Add uppercase, number, special char)")
+        } else {
+            setEmailStrength("Weak ❌ (Too short)")
+        }
     }
-}
 
     return (
-        <div className="row justify-content-center mt-0 overral">
-            <Navbar/>
-            <div className="col-md-6 ">
+        <div className="row justify-content-center overral">
+            {/* <Navbar/> */}
+            <div className="col-md-6 mt-0  mob">
                 <br />
                 <h1 className="text-light"><u>Sign Up</u></h1>
+                <br /><br />
 
-                <h3 className="text-light">Please fill in this form</h3>
+                <Link to='/signin'>Already have an account? Sign In</Link>
+                <br /><br />
 
+                <h6 className="split" onClick={() => { navigator("/") }}><b className="br1">Home</b></h6>
 
+                {/* <h3 className="text-light">Please fill in this form</h3> */}
+            </div>
+
+            <div className="col-md-6 ">
                 <h5 className="text-warning">{loading}</h5>
                 <h5 className="text-danger">{error}</h5>
                 <h5 className="text-success">{success}</h5>
                 {/* <p>Current Username :{username}</p> */}
 
                 {/* <div className="input-group"> */}
-                    <form onSubmit={handleSubmit} className="colla viel">
+                <form onSubmit={handleSubmit} className="colla viel">
 
-                    <label>Enter Your Username</label>
                     <input type="text"
                         className="form-control  input-box"
-                        placeholder=""
+                        placeholder="Enter Your Username"
                         required
                         onChange={(e) => {
                             updateUsername(e.target.value)
                         }}
                         value={username}
                     />
-                    <br /><br />
+                    <br />
 
-                    <label>Enter Your Email</label>
                     <input type="email"
                         className="form-control input-box"
-                        placeholder=""
+                        placeholder="Enter Your Email"
                         required
                         onChange={(e) => {
                             updateEmail(e.target.value)
-                            checkPasswordStrength(e.target.value)
+                            checkEmailStrength(e.target.value)
                         }}
                         value={email}
                     />
-                    <p className={
-                    passwordStrength.includes("Strong") ? "text-success" :
-                    passwordStrength.includes("Medium") ? "text-warning" :
-                    "text-danger"
+                    <h6 className={
+                        emailStrength.includes("Strong") ? "text-success" :
+                            emailStrength.includes("Medium") ? "text-warning" :
+                                "text-danger"
                     }>
-                    {passwordStrength}
-                    </p> 
-                    
-                    <br /><br />
+                        {emailStrength}
+                    </h6>
 
-                    <label>Enter Your Password</label>
+                    <br />
+
                     <input type="password"
                         className="form-control  input-box"
-                        placeholder=""
+                        placeholder="Enter Your Password"
                         required
                         onChange={(e) => {
                             updatePassword(e.target.value)
                         }}
                         value={password}
                     />
-                    
 
-                    <br /><br />
 
-                    <label>Enter Your Phone Number</label>
+                    <br />
+
                     <input type="tel"
                         className="form-control  input-box"
-                        placeholder=""
+                        placeholder="Enter Your Phone Number"
                         required
                         minLength={10}
                         maxLength={10}
@@ -159,19 +170,19 @@ const SignUpComponent = () => {
                         }}
                         value={phone}
                     />
-                    <br /><br />
+                    {/* <br /> */}
 
                     <button className="btn btn-dark">
                         Sign Up
                     </button><br />
 
-                    <Link to='/signin'>Already have an account? Sign In</Link>
+
 
 
                 </form>
 
-                </div>
             </div>
+        </div>
         // </div>
 
 

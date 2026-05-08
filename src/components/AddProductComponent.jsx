@@ -88,6 +88,7 @@ const AddProuductComponent = () => {
                         placeholder="Product Cost"
                         className="form-control"
                         required
+                        pattern="[0-9]{10,}"
                         onChange={(e) => { setProductCost(e.target.value) }}
                         value={product_cost} />
                     <br /><br />

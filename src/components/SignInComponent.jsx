@@ -1,16 +1,20 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
+
+// import Navbar from "./Navbar";
 
 const SignInComponent = () => {
+    let navigator=useNavigate()
+    const navigate = useNavigate();
+
     let [email, updateEmail] = useState("");
     let [password, updatePassword] = useState("");
     let [passwordStrength, setPasswordStrength] = useState("")
 
-    let [pass, updatePass] = useState("");
-    let [password2, updatePassword2] = useState("");
-    let [passwordStrength2, setPasswordStrength2] = useState("")
+    // let [pass, updatePass] = useState("");
+    // let [password2, updatePassword2] = useState("");
+    // let [passwordStrength2, setPasswordStrength2] = useState("")
 
 
     //To show if UI is loading to notify user what is going on
@@ -19,7 +23,7 @@ const SignInComponent = () => {
     let [error, setError] = useState("");
 
     //Create variable for useNavigate
-    let navigate = useNavigate()
+    
 
     //To prevent reloading 
     const handleSubmit = async (e) => {
@@ -54,7 +58,7 @@ const SignInComponent = () => {
                     // stringify makes object to become a string
                     localStorage.setItem("user", JSON.stringify(response.data.user))
                     // Navigate is placed in the if because after loading it will take one to the path specified
-                    navigate("/")
+                    navigate("/home")
 
                 }
             }
@@ -89,41 +93,45 @@ const SignInComponent = () => {
 
     const checkPasswordStrength = (value) => {
         if (!value || value.length2 === 0) {
-            setPasswordStrength2("")
+            setPasswordStrength("")
             return
         }
 
         const strongRegex =
             /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-        if (strongRegex.test2(value)) {
-            setPasswordStrength2("Strong")
+        if (strongRegex.test(value)) {
+            setPasswordStrength("Strong")
         } else if (value.length2 >= 6) {
-            setPasswordStrength2("Medium (Add uppercase, number, special char)")
+            setPasswordStrength("Medium (Add uppercase, number, special char)")
         } else {
-            setPasswordStrength2("Weak (Too short)")
+            setPasswordStrength("Weak (Too short)")
         }
     }
 
 
     return (
-        <div className="row justify-content-center mt-0 black backpen ">
-            <Navbar />
-            <div className="col-md-6 mt-0">
+        <div className="row justify-content-center  black backpen ">
+            {/* <Navbar /> */}
+            <div className="col-md-6 ">
                 <h2 className="text-light"><u>Sign In</u></h2>
-
+                <br />
+                <Link to='/signup'>Don't have an account?Sign Up</Link>
+                <br /><br />
+                <h6 className="split" onClick={() => { navigator("/") }}><b className="br1">Home</b></h6>
+                <br />
                 {/* <h3 className="text-light">Please fill in the credentials</h3> */}
-
+            {/* </div> */}
 
                 <h5 className="text-warning">{loading}</h5>
                 <h5 className="text-success">{success}</h5>
                 <h5 className="text-danger">{error}</h5>
 
-
+            {/* <div className="col-md-6"> */}
                 <form onSubmit={handleSubmit} className="neon">
-                    <label>Enter Your Email</label>
+                    
                     <input type="email"
-                        placeholder=""
+                        placeholder="Enter Your Email"
                         className="form-control mb-0"
                         required
                         onChange={(e) => {
@@ -140,28 +148,26 @@ const SignInComponent = () => {
                     </p>
                     <br />
 
-                    <label>Enter Your Password </label>
+                    
                     <input type="password"
-                        placeholder=""
+                        placeholder="Enter Your Password"
                         className="form-control mt-0"
                         required
                         onChange={(e) => {
-                            updatePass(e.target.value)
-                            checkPasswordStrength(e.target.value)                        }}
-                        value={password2} />
+                            updatePassword(e.target.value)
+                            checkPasswordStrength(e.target.value)}}
+                        value={password} />
                     <h6 className={
-                        passwordStrength2.includes("Strong") ? "text-success" :
-                            passwordStrength2.includes("Medium") ? "text-warning" :
+                        passwordStrength.includes("Strong") ? "text-success" :
+                            passwordStrength.includes("Medium") ? "text-warning" :
                                 "text-danger"
                     }>
                         {passwordStrength}
                     </h6>
                     <br />
-                    <br /><br />
 
-                    <button className="btn btn-dark">Sign In</button>
+                    <button className="btn btn-dark" >Sign In</button>
                     <br />
-                    <Link to='/signup'>Don't have an account?Sign Up</Link>
                 </form>
             </div>
         </div>
