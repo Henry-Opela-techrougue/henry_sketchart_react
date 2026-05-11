@@ -1,20 +1,16 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-// import Navbar from "./Navbar";
+import Navbar from "./Navbar";
 
 const SignInComponent = () => {
-    let navigator=useNavigate()
+    // let navigator=useNavigate()
     const navigate = useNavigate();
 
     let [email, updateEmail] = useState("");
     let [password, updatePassword] = useState("");
-    let [passwordStrength, setPasswordStrength] = useState("")
 
-    // let [pass, updatePass] = useState("");
-    // let [password2, updatePassword2] = useState("");
-    // let [passwordStrength2, setPasswordStrength2] = useState("")
+    const [showPassword, setShowPassword] = useState(false);
 
 
     //To show if UI is loading to notify user what is going on
@@ -73,61 +69,41 @@ const SignInComponent = () => {
 
     }
 
-    const checkEmailStrength = (value) => {
-        if (!value || value.length === 0) {
-            setPasswordStrength("")
-            return
-        }
+    //for email
+    const emailBorderColor =
+        email.includes("@") && email.includes(".")
+            ? "green"
+            : email.length > 3
+                ? "orange"
+                : "red";
 
-        const strongRegex =
-            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
-        if (strongRegex.test(value)) {
-            setPasswordStrength("Strong")
-        } else if (value.length >= 6) {
-            setPasswordStrength("Medium (Add uppercase, number, special char)")
-        } else {
-            setPasswordStrength("Weak (Too short)")
-        }
-    }
-
-    const checkPasswordStrength = (value) => {
-        if (!value || value.length2 === 0) {
-            setPasswordStrength("")
-            return
-        }
-
-        const strongRegex =
-            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
-        if (strongRegex.test(value)) {
-            setPasswordStrength("Strong")
-        } else if (value.length2 >= 6) {
-            setPasswordStrength("Medium (Add uppercase, number, special char)")
-        } else {
-            setPasswordStrength("Weak (Too short)")
-        }
-    }
-
+    // for password
+    const passwordBorderColor =
+        password.length < 6
+            ? "red"
+            : /[A-Z]/.test(password) &&
+                /[0-9]/.test(password) &&
+                /[^A-Za-z0-9]/.test(password)
+                ? "green"
+                : "orange";
 
     return (
-        <div className="row justify-content-center  black backpen ">
-            {/* <Navbar /> */}
-            <div className="col-md-6 ">
+        <div className="row justify-content-center backpen ">
+            <Navbar />
+            <div className="col-md-6">
                 <h2 className="text-light"><u>Sign In</u></h2>
                 <br />
                 <Link to='/signup'>Don't have an account?Sign Up</Link>
                 <br /><br />
-                <h6 className="split" onClick={() => { navigator("/") }}><b className="br1">Home</b></h6>
                 <br />
                 {/* <h3 className="text-light">Please fill in the credentials</h3> */}
-            {/* </div> */}
+            </div>
 
+                <div className="col-md-6">
                 <h5 className="text-warning">{loading}</h5>
                 <h5 className="text-success">{success}</h5>
                 <h5 className="text-danger">{error}</h5>
 
-            {/* <div className="col-md-6"> */}
                 <form onSubmit={handleSubmit} className="neon">
                     
                     <input type="email"
@@ -136,34 +112,43 @@ const SignInComponent = () => {
                         required
                         onChange={(e) => {
                             updateEmail(e.target.value)
-                            checkEmailStrength(e.target.value)
+                        }}
+                        style={{
+                            border: `3px solid ${email ? emailBorderColor : "#ccc"}`,
+                            borderRadius: "8px",
                         }}
                         value={email} />
-                    <p className={
-                        passwordStrength.includes("Strong") ? "text-success" :
-                            passwordStrength.includes("Medium") ? "text-warning" :
-                                "text-danger"
-                    }>
-                        {passwordStrength}
-                    </p>
+
                     <br />
 
                     
-                    <input type="password"
+                    <input type={showPassword ? "text" : "password"}
                         placeholder="Enter Your Password"
                         className="form-control mt-0"
                         required
                         onChange={(e) => {
                             updatePassword(e.target.value)
-                            checkPasswordStrength(e.target.value)}}
+                            }}
+                        style={{
+                            border: `3px solid ${password ? passwordBorderColor : "#ccc"}`,
+                            borderRadius: "8px",
+                        }}
                         value={password} />
-                    <h6 className={
-                        passwordStrength.includes("Strong") ? "text-success" :
-                            passwordStrength.includes("Medium") ? "text-warning" :
-                                "text-danger"
-                    }>
-                        {passwordStrength}
-                    </h6>
+                        <span
+                        onClick={() => setShowPassword(!showPassword)}
+                        style={{
+                            position: "absolute",
+                            right: "40px",
+                            top: "50%",
+                            transform: "translateY(-50%)",
+                            cursor: "pointer",
+                            fontSize: "14px",
+                            color: "#555",
+                        }}
+                    >
+                        {showPassword ? "Hide" : "Show"}
+                    </span>
+                    
                     <br />
 
                     <button className="btn btn-dark" >Sign In</button>

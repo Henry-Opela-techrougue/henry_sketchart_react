@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import Navbar from "./Navbar";
+import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 
 
 const SignUpComponent = () => {
-    let navigator = useNavigate()
+    // let navigator = useNavigate()
     const navigate = useNavigate();
 
 
@@ -14,7 +14,9 @@ const SignUpComponent = () => {
     let [email, updateEmail] = useState("")
     let [password, updatePassword] = useState("")
     let [phone, updatePhone] = useState("")
-    let [emailStrength, setEmailStrength] = useState("")
+
+    const [showPassword, setShowPassword] = useState(false);
+
 
 
     //
@@ -69,28 +71,37 @@ const SignUpComponent = () => {
         }
     };
 
-    const checkEmailStrength = (value) => {
-        if (!value || value.length === 0) {
-            setEmailStrength("")
-            return
-        }
+    // for username
+    const borderColor =
+        username.length < 4
+            ? "red"
+            : username.length < 8
+                ? "orange"
+                : "green";
 
-        const strongRegex =
-            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-        if (strongRegex.test(value)) {
-            setEmailStrength("Strong 💪")
-        } else if (value.length >= 6) {
-            setEmailStrength("Medium ⚠️ (Add uppercase, number, special char)")
-        } else {
-            setEmailStrength("Weak ❌ (Too short)")
-        }
-    }
+    //for email
+    const emailBorderColor =
+        email.includes("@") && email.includes(".")
+            ? "green"
+            : email.length > 3
+                ? "orange"
+                : "red";
+
+    // for password
+    const passwordBorderColor =
+        password.length < 6
+            ? "red"
+            : /[A-Z]/.test(password) &&
+                /[0-9]/.test(password) &&
+                /[^A-Za-z0-9]/.test(password)
+                ? "green"
+                : "orange";
 
     return (
         <div className="row justify-content-center overral">
-            {/* <Navbar/> */}
-            <div className="col-md-6 mt-0  mob">
+            <Navbar />
+            <div className="col-md-6 mt-0  mob scroll">
                 <br />
                 <h1 className="text-light"><u>Sign Up</u></h1>
                 <br /><br />
@@ -98,7 +109,7 @@ const SignUpComponent = () => {
                 <Link to='/signin'>Already have an account? Sign In</Link>
                 <br /><br />
 
-                <h6 className="split" onClick={() => { navigator("/") }}><b className="br1">Home</b></h6>
+                {/* <h6 className="split" onClick={() => { navigator("/") }}><b className="br1">Home</b></h6> */}
 
                 {/* <h3 className="text-light">Please fill in this form</h3> */}
             </div>
@@ -119,6 +130,10 @@ const SignUpComponent = () => {
                         onChange={(e) => {
                             updateUsername(e.target.value)
                         }}
+                        style={{
+                            border: `2px solid ${username ? borderColor : "#ccc"}`,
+                            borderRadius: "8px",
+                        }}
                         value={username}
                     />
                     <br />
@@ -129,29 +144,44 @@ const SignUpComponent = () => {
                         required
                         onChange={(e) => {
                             updateEmail(e.target.value)
-                            checkEmailStrength(e.target.value)
+                        }}
+                        style={{
+                            border: `3px solid ${email ? emailBorderColor : "#ccc"}`,
+                            borderRadius: "8px",
                         }}
                         value={email}
                     />
-                    <h6 className={
-                        emailStrength.includes("Strong") ? "text-success" :
-                            emailStrength.includes("Medium") ? "text-warning" :
-                                "text-danger"
-                    }>
-                        {emailStrength}
-                    </h6>
+
 
                     <br />
 
-                    <input type="password"
+                    <input type={showPassword ? "text" : "password"}
                         className="form-control  input-box"
                         placeholder="Enter Your Password"
                         required
                         onChange={(e) => {
                             updatePassword(e.target.value)
                         }}
+                        style={{
+                            border: `3px solid ${password ? passwordBorderColor : "#ccc"}`,
+                            borderRadius: "8px",
+                        }}
                         value={password}
                     />
+                    <span
+                        onClick={() => setShowPassword(!showPassword)}
+                        style={{
+                            position: "absolute",
+                            right: "40px",
+                            top: "54%",
+                            transform: "translateY(-50%)",
+                            cursor: "pointer",
+                            fontSize: "14px",
+                            color: "#555",
+                        }}
+                    >
+                        {showPassword ? "Hide" : "Show"}
+                    </span>
 
 
                     <br />

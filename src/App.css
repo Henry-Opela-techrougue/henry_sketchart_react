@@ -41,6 +41,70 @@
   }
 } 
 
+/* for coloein input */
+ /* .green {
+  background-color: #39ff14;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  right: 30px;
+  top: 20%;
+  transform: translateY(-50%);
+  
+}
+
+.yellow {
+  background-color: yellow;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  right: 30px;
+  top: 20%;
+  transform: translateY(-50%);
+}   */
+/* end of color */
+
+.center {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.purple {
+  background-color: indigo;
+  border-radius: 10px;
+  height: 3rem;
+  width: 10rem;
+}
+
+.black {
+  background-color: #000;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.light {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.white {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  height: 3rem;
+  width: 10rem;
+}
+
+.dark {
+  background-color: #000;
+  height: 100vh;
+  background-size: 100%;
+}
+
 .m {
   margin-right: -10px;
 }
@@ -54,6 +118,21 @@ h3 {
 h1 {
   justify-content: center;
   display: flex;
+}
+
+.scroll {
+  
+}
+
+.viel2 {
+   /* glass */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  /* color: white; */
+  padding: 12px 24px;
+  border-radius: 10px;
+  align-content: center;
 }
 
 .payment {
@@ -157,7 +236,7 @@ h1 {
 }
 
 .background {
-  background: url("/src/components/images/Choso.jpg");
+  background: url("/src/components/images/Sundear.jpg");
   height: 100vh;
   /* background-position: center; */
   background-repeat: no-repeat;
@@ -255,7 +334,7 @@ h1 {
 
 /* for sign up */
 .overral {
- background: url("/src/components/images/Stack.jpg");
+ background: url("/src/components/images/Light\ nature.jpg");
  background-size: cover;
  background-repeat: no-repeat;
  background-position: center;
@@ -264,7 +343,7 @@ h1 {
 }
 
 .backpen {
-  background: url("../src/components/images/Stack.jpg");
+  background: url("../src/components/images/Nature.jpg");
   background-size: cover;
   height: 100vh;
   background-position: center;
@@ -541,9 +620,9 @@ h1 {
   padding: 12px 24px;
   border-radius: 12px;
   border: 1px solid rgba(99, 97, 97, 0.3);
-  /* background: rgba(255, 255, 255, 0.2);   Semi-transparent white */
+  background: rgb(255, 255, 255);
   backdrop-filter: blur(20px);               /* The "frosted glass" effect */
-  color: #fff;
+  color: #414040;
 }
 
 .br1:hover {
@@ -588,7 +667,7 @@ h1 {
 }
 
 /* sign in and sign up neon */
-.form-control {
+/* .form-control {
   background: #111;
   column-rule-color: #0ff;
   border: 2px solid #0ff;
@@ -597,7 +676,7 @@ h1 {
   text-shadow: 0 0 5px #0ff;
   box-shadow: 0 0 10px #0ff;
 
-}
+} */
 /* end of sign in and signn up neon */
 
 

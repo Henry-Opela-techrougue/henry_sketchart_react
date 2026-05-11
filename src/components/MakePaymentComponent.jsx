@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 
 const MakePaymentComponent = () => {
 
@@ -45,8 +45,8 @@ const MakePaymentComponent = () => {
     console.log(product)
     return (
         <div className="row justify-content-center payment">
-            <Navbar/>
-            <h2 className="text-success mpesa">LIPA NA MPESA</h2>
+            {/* <Navbar/> */}
+            <h2 className="text-light">LIPA NA MPESA</h2>
             <div className="col-md-3">
                 <img src={img_url + product.product_image} alt="" className="rounded img-thumbnail" />
             </div>
@@ -55,7 +55,7 @@ const MakePaymentComponent = () => {
                 <h2 className="text-dark">{product.product_name}</h2>
                 <h4 className="text-primary">{product.product_category}</h4>
                 <p className="text-muted">{product.product_description}</p>
-                <h4 className="text-warning">{product.product_cost}</h4>
+                <h4 className="text-warning">Ksh{product.product_cost}</h4>
 
                 <hr />
 

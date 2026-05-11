@@ -200,7 +200,7 @@ const GetProductsComponent = () => {
                         </div>
                     </div>
                 </div>
-            ))} */}
+            ))} */} 
 
             {/* </div> */}
 
