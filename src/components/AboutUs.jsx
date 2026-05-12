@@ -17,6 +17,7 @@ const AboutUs = () => {
             </div>
 
             {/* icons for social media */}
+            <br /><br />
             <div className="row mb-2 nor">
                 <div className="col-md-3">
                     <h1 className="text-light" onClick={() =>

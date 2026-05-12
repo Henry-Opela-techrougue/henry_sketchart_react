@@ -53,8 +53,6 @@ const ErasersComponent = () => {
     return (
         <div className="row erase h-100 w-100">
             <Navbar />
-            <h3 className="" onClick={() => { navigator("/home") }}>Back</h3>
-
             <h5 className="text-warning">{loading}</h5>
             <h5 className="text-danger">{error}</h5>
 
@@ -66,6 +64,8 @@ const ErasersComponent = () => {
                 to prevent adding and creating many card body.It prevents adding multiple card body repeatedly.The products.map(()=>()) is used to locate data in the database. */}
 
                 <h2 className="text-center my-2 p-4 text-white"><u>Erasers</u></h2>
+                <h3 className="" onClick={() => { navigator("/home") }}>Back</h3>
+
                 {loading ? (
                     Array(8).fill(0).map((_, index) => (
                         <div className="col-md-3 mb-4" key={index}>
@@ -112,11 +112,7 @@ const ErasersComponent = () => {
                                         Purchase Now
                                     </button>
 
-                                    <button
-                                        className="btn btn-success m-2"
-                                    >
-                                        Add To Cart
-                                    </button>
+                                    
                                 </div>
                             </div>
                         </div>

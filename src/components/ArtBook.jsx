@@ -51,14 +51,15 @@ const ArtBook = () => {
     return (
         <div className=" row forward h-100">
             <Navbar />
-            <h3 className="" onClick={() => { navigator("/home") }}>Back</h3>
 
             <h5 className="text-warning">{loading}</h5>
             <h5 className="text-danger">{error}</h5>
 
 
             <div className="row">
-                <h2 className="text-center my-2 p-4 text-white"><u>Art Books</u></h2>
+                <h2 className="text-center my-2 p-4 text-dark"><u>Art Books</u></h2>
+                <h3 className="" onClick={() => { navigator("/getproducts") }}>Back</h3>
+
                 {loading ? (
                     Array(8).fill(0).map((_, index) => (
                         <div className="col-md-3 mb-4" key={index}>
@@ -87,12 +88,14 @@ const ArtBook = () => {
                                 <div className="card-body">
                                     {/* {product.product_name}is used to place the required text in the  */}
 
-                                    <h5 className="mt-2">{product.product_name}</h5>
+                                    <div className="mt-4">
+                                        <h5 className="mt-2">{product.product_name}</h5>
                                     <p className="text-mute">{product.product_description}</p>
                                     <b className="text-warning">Ksh{product.product_cost}</b>
                                     <br />
                                     {/* {state: {product}} is used to take the user to the specific product */}
                                     <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
+                                    </div>
 
                                 </div>
                             </div>

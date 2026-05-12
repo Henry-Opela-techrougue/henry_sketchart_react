@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 const Navbar = () => {
     //parse converts string to object
     const user = JSON.parse(localStorage.getItem("user"))
+    console.log(JSON.parse)
     console.log(user)
 
     let navigator = useNavigate()
@@ -21,7 +22,7 @@ const Navbar = () => {
 
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <div className="navbar-nav" >
-                        <Link className="nav-link" to='/'><b className="br1">Home</b></Link>
+                        {/* <Link className="nav-link" to='/'><b className="br1">Home</b></Link> */}
                         {/* <h6 className="split" onClick={() => { navigator("/aboutus") }}><b className="br1">About Us</b></h6> */}
                         {/* <Link className="nav-link blue" to='/getproducts'><b className="br1">Get Products</b></Link>
                         <Link className="nav-link blue" to='/addproduct'><b className="br1">Add Product</b></Link> */}
@@ -33,6 +34,8 @@ const Navbar = () => {
                                 <Link className="nav-link text-light" to='#'>
                                     {user.username}
                                 </Link>
+                                <h6 className="br2" onClick={() => { navigator("/home") }}>Home</h6>
+
 
                                 <button className="btn nav-link text-light br2" onClick={handleLogout}>Log Out</button>
                             </div>

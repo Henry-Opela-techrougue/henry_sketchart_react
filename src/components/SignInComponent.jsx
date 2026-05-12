@@ -71,7 +71,7 @@ const SignInComponent = () => {
 
     //for email
     const emailBorderColor =
-        email.includes("@") && email.includes(".")
+        email.includes("@") && email.includes(".com")
             ? "green"
             : email.length > 3
                 ? "orange"

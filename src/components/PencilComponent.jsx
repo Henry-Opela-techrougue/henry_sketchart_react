@@ -53,13 +53,13 @@ const PencilComponent = () => {
     return (
         <div className="portrait">
             <Navbar />
-            <h3 className="" onClick={() => { navigator("/home") }}>Back</h3>
-
             <h5 className="text-warning">{loading}</h5>
             <h5 className="text-danger">{error}</h5>
 
             <div className="row">
                 <h1 className="text-center my-2 p-4 text-dark"><u>Pencils</u></h1>
+                <h3 className="" onClick={() => { navigator("/home") }}>Back</h3>
+
                 {loading ? (
                     Array(8).fill(0).map((_, index) => (
                         <div className="col-md-3 mb-4" key={index}>

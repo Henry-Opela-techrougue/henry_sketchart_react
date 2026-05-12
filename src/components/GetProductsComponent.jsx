@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 const GetProductsComponent = () => {
 
-    
+
     // let [products, setProducts] = useState([])
 
     // let [loading, setLoading] = useState("")
@@ -67,14 +67,16 @@ const GetProductsComponent = () => {
     // // }
     // // useEffect(()=>{handleSearch(search_word)},[search_word]);
 
+    const user = JSON.parse(localStorage.getItem("user"));
+
 
     return (
         <div className="row flower">
             <Navbar />
-            
-            <h3 className="text-light mt-5">Welcome dear user would you like to view our products?</h3>
+
+            <h3 className="text-light mt-5">Welcome, {user?.username}  would you like to view our products?</h3>
             <h5 className="text-light mb-4">Just click on any to check our products</h5>
-            
+
             {/* first row */}
             <div className="col-md-3 justify-content-center mb-4">
                 <div className="card shadow card-margin hero">
@@ -122,14 +124,14 @@ const GetProductsComponent = () => {
                         <img src={img_url + product.product_image} alt="" className="product_img mt-4" />
 
                         <div className="card-body"> */}
-                            {/* {product.product_name}is used to place the required text in the  */}
-                            
-                            {/* <h5 className="mt-2">{product.product_name}</h5>
+            {/* {product.product_name}is used to place the required text in the  */}
+
+            {/* <h5 className="mt-2">{product.product_name}</h5>
                             <p className="text-mute">{product.product_description}</p>
                             <b className="text-warning">{product.product_cost}</b>
                             <br /> */}
-                            {/* {state: {product}} is used to take the user to the specific product */}
-                            {/* <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
+            {/* {state: {product}} is used to take the user to the specific product */}
+            {/* <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
                             <button className="btn btn-success m-2" onClick={() => { navigator("/addtocart") }}>Add To Cart</button>
                         </div>
                     </div>
@@ -143,14 +145,14 @@ const GetProductsComponent = () => {
                         <img src={img_url + product.product_image} alt="" className="product_img mt-4" />
 
                         <div className="card-body"> */}
-                            {/* {product.product_name}is used to place the required text in the  */}
-{/*                         
+            {/* {product.product_name}is used to place the required text in the  */}
+            {/*                         
                             <h5 className="mt-2">{product.product_name}</h5>
                             <p className="text-mute">{product.product_description}</p>
                             <b className="text-warning">{product.product_cost}</b>
                             <br /> */}
-                            {/* {state: {product}} is used to take the user to the specific product */}
-                            {/* <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
+            {/* {state: {product}} is used to take the user to the specific product */}
+            {/* <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
                             <button className="btn btn-success m-2" onClick={() => { navigator("/addtocart") }}>Add To Cart</button>
 
                         </div>
@@ -165,14 +167,14 @@ const GetProductsComponent = () => {
                         <img src={img_url + product.product_image} alt="" className="product_img mt-4" />
 
                         <div className="card-body"> */}
-                            {/* {product.product_name}is used to place the required text in the  */}
-                            {/*                         
+            {/* {product.product_name}is used to place the required text in the  */}
+            {/*                         
                             <h5 className="mt-2">{product.product_name}</h5>
                             <p className="text-mute">{product.product_description}</p>
                             <b className="text-warning">{product.product_cost}</b>
                             <br /> */}
-                            {/* {state: {product}} is used to take the user to the specific product */}
-                            {/* <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
+            {/* {state: {product}} is used to take the user to the specific product */}
+            {/* <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
                             <button className="btn btn-success m-2" onClick={() => { navigator("/addtocart") }}>Add To Cart</button>
 
                         </div>
@@ -188,19 +190,19 @@ const GetProductsComponent = () => {
 
                         <div className="card-body">
                             {/* {product.product_name}is used to place the required text in the  */}
-                        
-                            {/* <h5 className="mt-2">{product.product_name}</h5>
+
+            {/* <h5 className="mt-2">{product.product_name}</h5>
                             <p className="text-mute">{product.product_description}</p>
                             <b className="text-warning">{product.product_cost}</b>
                             <br /> */}
-                            {/* {state: {product}} is used to take the user to the specific product */}
-                            {/* <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
+            {/* {state: {product}} is used to take the user to the specific product */}
+            {/* <button className="btn btn-dark" onClick={() => { navigator("/makepayment", { state: { product } }) }}>Purchase Now</button>
                             <button className="btn btn-success m-2" onClick={() => { navigator("/addtocart") }}>Add To Cart</button>
 
                         </div>
                     </div>
                 </div>
-            ))} */} 
+            ))} */}
 
             {/* </div> */}
 

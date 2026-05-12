@@ -52,8 +52,17 @@ const SignUpComponent = () => {
             //console.log should be removed after testing
             console.log(response);
             if (response.status === 200) {
+
                 setSuccess(response.data.message);
                 setLoading("")
+
+                // save user
+                localStorage.setItem("user", JSON.stringify({
+                    username,
+                    email,
+                    phone
+                }));
+
                 updateUsername("")
                 updateEmail("")
                 updatePassword("")
@@ -82,7 +91,7 @@ const SignUpComponent = () => {
 
     //for email
     const emailBorderColor =
-        email.includes("@") && email.includes(".")
+        email.includes("@") && email.includes(".com")
             ? "green"
             : email.length > 3
                 ? "orange"
@@ -173,7 +182,7 @@ const SignUpComponent = () => {
                         style={{
                             position: "absolute",
                             right: "40px",
-                            top: "54%",
+                            top: "53.5%",
                             transform: "translateY(-50%)",
                             cursor: "pointer",
                             fontSize: "14px",

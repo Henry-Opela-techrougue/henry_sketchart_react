@@ -120,9 +120,6 @@ h1 {
   display: flex;
 }
 
-.scroll {
-  
-}
 
 .viel2 {
    /* glass */
@@ -315,7 +312,7 @@ h1 {
 }
 
 .colorful {
-  background: url("/src/components/images/Colourful.jpg");
+  background: url("/src/components/images/Dearvid.gif");
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;

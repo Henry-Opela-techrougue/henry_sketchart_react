@@ -57,10 +57,10 @@ const AddProuductComponent = () => {
 
 
     return (
-        <div className="row justify-content-center colorful h-100">
-            <Navbar/>
+        <div className="row justify-content-center colorful">
+            <Navbar />
             <div className="col-md-6 p-4">
-                <h2>Add Product</h2>
+                <h2 className="text-light">Add Product</h2>
 
                 <h5 className="text-danger">{error}</h5>
                 <h5 className="text-warning">{loading}</h5>
@@ -84,29 +84,27 @@ const AddProuductComponent = () => {
                     ></textarea>
                     <br /><br />
 
-                    <input type="text"
+                    <input type="number"
                         placeholder="Product Cost"
                         className="form-control"
                         required
-                        pattern="[0-9]{10,}"
+                        pattern=""
                         onChange={(e) => { setProductCost(e.target.value) }}
                         value={product_cost} />
                     <br /><br />
 
-                    <label htmlFor="" className="form-label">Product Category</label>
                     <select className="form-control"
                         required
                         onChange={(e) => { setProductCategory(e.target.value) }}
                     >
                         <option value="">Select Category</option>
-                        <option value="erasers">erasers</option>
+                        <option value="erasers">Erasers</option>
                         <option value="pencils">Pencils</option>
-                        <option value="prawing books">Drawing books</option>
-                        <option value="reference Art Books">Reference Art Books</option>
+                        <option value="drawing books">Drawing books</option>
+                        <option value="reference art books">Reference Art Books</option>
                     </select>
                     <br /><br />
 
-                    <label htmlFor="" className="form-label">Product Image</label>
                     <input type="file"
                         placeholder="Upload Image"
                         className="form-control"
