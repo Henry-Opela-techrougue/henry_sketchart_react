@@ -13,7 +13,6 @@ import ArtBook from './components/ArtBook';
 import PencilComponent from './components/PencilComponent';
 import ReferenceArt from './components/ReferenceArt';
 import AboutUs from './components/AboutUs';
-import FeedBack from './components/FeedBack';
 import Entry from './components/Entry';
 
 
@@ -42,7 +41,6 @@ function App() {
             <Route path='/refartbks' element={<ReferenceArt/>}/>
             <Route path='/erasers' element={<ErasersComponent/>}/>
             <Route path='/aboutus' element={<AboutUs/>}/>
-            <Route path='/feedback' element={<FeedBack/>}/>
             <Route path='/home' element={<Home />} />
             <Route path='/' element={<Entry/>}/>
           </Routes>
